@@ -85,3 +85,6 @@ Route::get('/tinhthuong/{a}/{b}', function ($a,$b) {
     echo $a/$b;exit;
     
 })->whereNumber('a')->whereNumber('b');
+
+
+
