@@ -49,7 +49,6 @@ Route::get('/detail/{id}',[PageController::class,'getDetail']);
 
 
 
-Route::get('/luan4',[PageController::class,'marter']);
 
 
 
