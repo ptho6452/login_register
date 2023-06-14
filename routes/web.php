@@ -21,7 +21,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::get('/register', function () {
+    return view('page.register');
+});
+Route::post('/register',[UserController::class,'Register']);
+Route::get('/login', function () {						
+    return view('page.login');						
+    });	
+Route::post('/login',[UserController::class,'Login']);
+					
+Route::get('/logout', [UserController::class,'Logout'])->name('logout');
 
 
 // addRooms
@@ -69,22 +78,7 @@ Route::post('/delete/{id}', [PageController::class, 'postAdminDelete']);
 
 
 
-Route::get('/tinhtich/{a}/{b}', function ($a,$b) {
-    echo $a*$b;exit;
-    
-})->whereNumber('a')->whereNumber('b');
-Route::get('/tinhtong/{a}/{b}', function ($a,$b) {
-    echo $a+$b;exit;
-    
-})->whereNumber('a')->whereNumber('b');
-Route::get('/tinhhieu/{a}/{b}', function ($a,$b) {
-    echo $a-$b;exit;
-    
-})->whereNumber('a')->whereNumber('b');
-Route::get('/tinhthuong/{a}/{b}', function ($a,$b) {
-    echo $a/$b;exit;
-    
-})->whereNumber('a')->whereNumber('b');
+
 
 
 

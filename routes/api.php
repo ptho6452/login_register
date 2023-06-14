@@ -21,9 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 // create api
 Route::get('/get-product',[APIController::class,'getProducts']);
-
-
-
 Route::get('/get-product/{id}', [APIController::class,'getOneProduct']);
 Route::post('/add-product',[APIController::class,'addProduct']);
 Route::delete('/delete-product/{id}',[APIController::class,'deleteProduct']);
